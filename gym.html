@@ -1,187 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnasio PowerFit</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        /* Banner Inicio */
-        
-        #inicio {
-            background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-        
-        #inicio h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 15px;
-        }
-        
-        #about {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #ffecd2, #fcb69f);
-            text-align: center;
-            border-radius: 0 0 40px 40px;
-        }
-        
-        #about h2 {
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        
-        #about p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 1.1rem;
-        }
-        
-        #services {
-            padding: 60px 20px;
-            background: #f8f9fa;
-        }
-        
-        .service-card {
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: scale(1.05);
-        }
-        
-        footer {
-            background: #222;
-            color: #f5f5f5;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        footer a {
-            color: #f5f5f5;
-            margin: 0 12px;
-            font-size: 1.4rem;
-            transition: color 0.3s;
-        }
-        
-        footer a:hover {
-            color: #ffb400;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit — Gimnasio Elite</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080a0f;--card:#12141d;--line:rgba(255,255,255,0.08);--accent:#7c6cff;--lime:#d6ff00;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg); color:#e8e8ea; font-family:'Inter',sans-serif;}
+.navbar{background:rgba(8,10,15,0.85)!important; backdrop-filter:blur(20px); border-bottom:1px solid var(--line);}
+.navbar-brand{font-weight:800; letter-spacing:-0.05em; color:white!important;}
+.nav-link{color:#9aa0a6!important; font-size:13px; font-family:'JetBrains Mono';}
+.nav-link:hover{color:white!important;}
+#inicio{position:relative; background:linear-gradient(to bottom, rgba(0,0,0,0.3), #080a0f 95%), url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center; height:90vh; display:flex; align-items:center; justify-content:center; text-align:center;}
+#inicio h1{font-size:72px; font-weight:800; line-height:0.85; letter-spacing:-0.06em; max-width:800px;}
+.eyebrow{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:var(--lime); background:rgba(214,255,0,0.12); border:1px solid rgba(214,255,0,0.2); padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:20px;}
+#about{background:var(--card); border:1px solid var(--line); border-radius:28px; margin:-60px auto 0; max-width:900px; padding:48px; text-align:center; position:relative; z-index:2;}
+.service-card{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px; height:100%; transition:.4s;}
+.service-card:hover{transform:translateY(-5px); border-color:rgba(214,255,0,0.3);}
+.service-card i{color:var(--lime); background:rgba(214,255,0,0.12); width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:14px; font-size:18px;}
+footer{background:#0a0c12; border-top:1px solid var(--line); padding:50px 0; text-align:center;}
+@media(max-width:768px){#inicio h1{font-size:42px;} #about{margin:-30px 16px 0; padding:28px;}}
+</style>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#inicio">PowerFit</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Inicio -->
-    <section id="inicio">
-        <div>
-            <h1>Bienvenido a PowerFit</h1>
-            <p class="lead">Tu fuerza, nuestra pasión. Logra tus metas hoy.</p>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <p>
-                En <strong>PowerFit</strong> ofrecemos un ambiente profesional y motivador para que alcances tus objetivos. Nuestro equipo de entrenadores certificados está comprometido con tu progreso, guiándote con planes de entrenamiento y nutrición
-                personalizados.
-            </p>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="services">
-        <div class="container">
-            <h2 class="text-center mb-5">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Entrenamiento Personalizado</h5>
-                        <p>Planes de ejercicio adaptados a tus metas y condición física.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Clases de CrossFit</h5>
-                        <p>Sesiones intensas para mejorar fuerza, resistencia y agilidad.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Yoga & Pilates</h5>
-                        <p>Mejora tu flexibilidad, equilibrio y bienestar mental.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Zumba</h5>
-                        <p>Diviértete mientras quemas calorías con música y baile.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Nutrición Deportiva</h5>
-                        <p>Asesoría alimenticia para complementar tus entrenamientos.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Entrenamiento Funcional</h5>
-                        <p>Rutinas dinámicas que se adaptan a tu vida diaria.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow p-3">
-                        <h5 class="card-title">Spinning</h5>
-                        <p>Cardio de alto impacto con bicicletas estáticas y música motivadora.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 PowerFit - Todos los derechos reservados</p>
-        <div class="mt-2">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-whatsapp"></i></a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">PowerFit.</a>
+<div class="ms-auto d-flex gap-3"><a class="nav-link" href="#about">SOBRE</a><a class="nav-link" href="#services">SERVICIOS</a></div>
+</div>
+</nav>
+<section id="inicio">
+<div>
+<div class="eyebrow">GUATEMALA — ABIERTO 5AM A 10PM</div>
+<h1>Tu fuerza,<br><span style="color:#6b7280;">nuestra<br>obsesión.</span></h1>
+<p class="mt-4" style="color:#9aa0a6; max-width:480px; margin:16px auto 0;">Planes reales, no humo. Entrenadores que sí entrenan.</p>
+<a href="#services" style="background:var(--lime); color:black; padding:14px 28px; border-radius:100px; text-decoration:none; font-weight:700; display:inline-block; margin-top:28px;">Ver membresías →</a>
+</div>
+</section>
+<section id="about">
+<h2 style="font-size:32px; font-weight:800; letter-spacing:-0.05em;">No somos un gimnasio bonito.</h2>
+<p style="color:#9aa0a6; margin-top:16px; line-height:1.6;">En <strong style="color:white;">PowerFit</strong> ofrecemos un ambiente que te exige. Nuestro equipo certificado no te deja abandonar a la mitad. Entrenamiento y nutrición personalizados, sin excusas.</p>
+</section>
+<section id="services" class="container py-5 mt-4">
+<h6 style="font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:#6b7280;" class="text-center mb-4">7 SERVICIOS — ELIGE TU ARMA</h6>
+<div class="row g-3">
+<div class="col-md-4"><div class="service-card"><i class="bi bi-person-arms-up"></i><h5>Entrenamiento Personalizado</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Planes adaptados a tu meta real, no plantilla.</p></div></div>
+<div class="col-md-4"><div class="service-card"><i class="bi bi-fire"></i><h5>Clases de CrossFit</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Sesiones intensas para fuerza y resistencia.</p></div></div>
+<div class="col-md-4"><div class="service-card"><i class="bi bi-flower1"></i><h5>Yoga & Pilates</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Flexibilidad, equilibrio y mente clara.</p></div></div>
+<div class="col-md-4"><div class="service-card"><i class="bi bi-music-note-beamed"></i><h5>Zumba</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Quema calorías bailando. Sin aburrimiento.</p></div></div>
+<div class="col-md-4"><div class="service-card"><i class="bi bi-egg-fried"></i><h5>Nutrición Deportiva</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Asesoría para que el gym sí se note.</p></div></div>
+<div class="col-md-4"><div class="service-card"><i class="bi bi-activity"></i><h5>Funcional</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Rutinas dinámicas para tu vida diaria.</p></div></div>
+<div class="col-md-12"><div class="service-card" style="background:var(--lime); color:black; display:flex; align-items:center; justify-content:space-between;"><div><i class="bi bi-bicycle" style="background:rgba(0,0,0,0.1); color:black;"></i><h5 style="color:black;">Spinning Elite — Cardio que engancha</h5><p style="color:rgba(0,0,0,0.6); font-size:13px; margin-top:4px;">Bicicletas nuevas, música a todo volumen.</p></div><a href="https://wa.me/50200000000" style="background:black; color:var(--lime); padding:10px 20px; border-radius:100px; text-decoration:none; font-weight:700; font-size:13px;">Reservar</a></div></div>
+</div>
+</section>
+<footer><p style="font-size:13px; color:#6b7280;">© 2026 PowerFit — Guatemala</p></footer>
 </body>
-
 </html>
