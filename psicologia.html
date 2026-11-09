@@ -1,270 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Psicólogo Dr. Juan Pérez</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet" />
-
-    <style>
-         :root {
-            --primary: #A85C40;
-            --accent: #D9B08C;
-            --bg: #FAF4EF;
-            --text: #4A3C31;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            padding-top: 80px;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .navbar {
-            background-color: #ffffff;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(168, 92, 64, 0.2);
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            color: var(--primary) !important;
-        }
-        
-        .nav-link:hover {
-            color: var(--accent) !important;
-        }
-        
-        .banner {
-            background: url('https://images.pexels.com/photos/4050299/pexels-photo-4050299.jpeg') center/cover no-repeat;
-            height: 350px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0 0 20px 20px;
-            overflow: hidden;
-        }
-        
-        .banner::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(168, 92, 64, 0.5);
-        }
-        
-        .banner-text {
-            color: white;
-            text-align: center;
-            z-index: 1;
-        }
-        
-        .banner-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        
-        .banner-text p {
-            font-size: 1.2rem;
-        }
-        
-        section {
-            padding: 60px 0;
-        }
-        
-        h2.section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: var(--primary);
-            position: relative;
-        }
-        
-        h2.section-title::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--accent);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 6px 20px rgba(168, 92, 64, 0.15);
-            transition: all 0.3s ease;
-            height: 100%;
-            color: var(--text);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(168, 92, 64, 0.3);
-            background: var(--accent);
-            color: var(--primary);
-        }
-        
-        .service-card h4 {
-            font-weight: 700;
-            color: inherit;
-        }
-        
-        .btn-accent {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 28px;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-            font-size: 1rem;
-        }
-        
-        .btn-accent:hover {
-            background-color: #7a4229;
-            color: #f9f4ef;
-        }
-        
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.4rem;
-            transition: color 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            color: var(--accent);
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dr. Juan Pérez — Psicólogo Clínico</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#fbfaf7;--card:#ffffff;--line:rgba(0,0,0,0.08);--ink:#1a1d1a;--sage:#6b7f6b;--sage-bg:#eef2ee;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif;}
+.navbar{background:rgba(251,250,247,0.85)!important; backdrop-filter:blur(20px); border-bottom:1px solid var(--line);}
+.navbar-brand{font-family:'Instrument Serif',serif; font-size:24px; letter-spacing:-0.03em;}
+.nav-link{font-size:13px; color:#6b7280!important; font-weight:500;}
+.nav-link:hover{color:var(--ink)!important;}
+.banner{position:relative; background:linear-gradient(to bottom, rgba(0,0,0,0.15), var(--bg)), url('https://images.pexels.com/photos/4050299/pexels-photo-4050299.jpeg'); background-size:cover; background-position:center; height:78vh; display:flex; align-items:end; padding-bottom:60px;}
+.banner-text h1{font-family:'Instrument Serif',serif; font-size:64px; line-height:0.9; letter-spacing:-0.04em; font-weight:400; max-width:600px;}
+.banner-text h1 em{font-style:italic; color:var(--sage);}
+.eyebrow{font-size:11px; letter-spacing:0.2em; color:var(--sage); background:var(--sage-bg); border:1px solid rgba(107,127,107,0.2); padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:16px;}
+section{padding:70px 0;}
+h2.section-title{font-family:'Instrument Serif',serif; font-size:42px; text-align:left; margin-bottom:32px; letter-spacing:-0.03em; font-weight:400;}
+h2.section-title::after{display:none;}
+.service-card{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px; transition:.4s; height:100%;}
+.service-card:hover{transform:translateY(-4px); border-color:rgba(107,127,107,0.3); box-shadow:0 12px 30px rgba(0,0,0,0.06);}
+.service-card h4{font-size:18px; font-weight:700; letter-spacing:-0.02em; margin-bottom:10px;}
+.service-card p{color:#6b7280; font-size:14px; line-height:1.5;}
+.service-card i{color:var(--sage); background:var(--sage-bg); width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:10px; margin-bottom:14px;}
+.btn-accent{background:var(--ink); color:white; border-radius:100px; padding:14px 28px; font-weight:600; font-size:14px; text-decoration:none; display:inline-block; transition:.3s;}
+.btn-accent:hover{background:#2a2d2a; color:white; transform:scale(1.02);}
+footer{background:#111311; color:#9aa0a6; padding:50px 0; text-align:center;}
+@media(max-width:768px){.banner-text h1{font-size:42px;}}
+</style>
 </head>
-
 <body>
-
-    <nav class="navbar fixed-top navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">Dr. Pérez</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navmenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header class="banner">
-        <div class="banner-text">
-            <h1>Bienestar emocional real</h1>
-            <p>Te acompaño con ciencia, empatía y propósito</p>
-        </div>
-    </header>
-
-    <main>
-        <section id="inicio" class="text-center">
-            <div class="container">
-                <h2 class="section-title">Sobre mí</h2>
-                <p class="mx-auto" style="max-width: 650px;">
-                    Soy un psicólogo clínico comprometido con tu salud mental. A través de enfoques integrativos y un trato personalizado, te ayudo a alcanzar equilibrio emocional, claridad y paz interior.
-                </p>
-            </div>
-        </section>
-
-        <section id="servicios">
-            <div class="container">
-                <h2 class="section-title">Servicios</h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Ansiedad</h4>
-                            <p>Técnicas para manejar miedos, fobias y ataques de pánico con seguridad.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Depresión</h4>
-                            <p>Explora tus emociones, supera la tristeza y recupera el sentido de vivir.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Autoestima</h4>
-                            <p>Construye una imagen sana de ti mismo y mejora tu relación interior.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Terapia de pareja</h4>
-                            <p>Fortalece tu vínculo amoroso con comunicación y escucha empática.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Estrés y Burnout</h4>
-                            <p>Gestión emocional en el trabajo y estrategias para prevenir agotamiento.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card">
-                            <h4>Duelo</h4>
-                            <p>Acompañamiento emocional para transitar pérdidas con compasión.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="text-center">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <p><i class="bi bi-envelope"></i> <a href="mailto:contacto@drperez.com">contacto@drperez.com</a></p>
-                <p><i class="bi bi-telephone"></i> +502 5555‑5555</p>
-                <a href="https://wa.me/50255555555" target="_blank" class="btn btn-accent mt-3">
-                    <i class="bi bi-whatsapp"></i> Escríbeme por WhatsApp
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Dr. Juan Pérez - Psicólogo Clínico</p>
-        <div class="social-icons">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<nav class="navbar fixed-top navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand" href="#">Dr. Pérez —</a>
+<div class="ms-auto d-flex gap-3"><a class="nav-link" href="#servicios">SERVICIOS</a><a class="nav-link" href="#contacto">CONTACTO</a></div>
+</div>
+</nav>
+<header class="banner">
+<div class="container">
+<div class="banner-text">
+<div class="eyebrow">PSICÓLOGO CLÍNICO — COLEGIADO 12,458</div>
+<h1>Bienestar emocional <em>real.</em> Sin clichés.</h1>
+<p class="mt-3" style="color:#6b7280; max-width:480px; line-height:1.5;">Te acompaño con ciencia, empatía y un plan claro. Sesiones presenciales en zona 10 y online.</p>
+</div>
+</div>
+</header>
+<main>
+<section id="inicio"><div class="container"><div class="row"><div class="col-lg-5"><h2 class="section-title">Sobre mí</h2></div><div class="col-lg-7"><p style="font-size:18px; line-height:1.6; color:#4b5563;">Soy psicólogo clínico con 8 años de experiencia. No hago terapias eternas. Trabajo con enfoques integrativos, objetivos medibles y un trato humano, para que recuperes equilibrio, claridad y paz interior en menos tiempo.</p></div></div></div></section>
+<section id="servicios" style="background:white; border-top:1px solid var(--line); border-bottom:1px solid var(--line);"><div class="container"><h2 class="section-title">Servicios con evidencia</h2><div class="row g-3">
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-wind"></i><h4>Ansiedad</h4><p>Técnicas para manejar miedos, fobias y ataques de pánico con seguridad.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-cloud-rain"></i><h4>Depresión</h4><p>Explora tus emociones, supera la tristeza y recupera el sentido de vivir.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-heart"></i><h4>Autoestima</h4><p>Construye una imagen sana de ti mismo y mejora tu relación interior.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-people"></i><h4>Terapia de pareja</h4><p>Fortalece tu vínculo con comunicación y escucha empática.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-battery-half"></i><h4>Estrés y Burnout</h4><p>Gestión emocional en el trabajo y prevención de agotamiento.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="service-card"><i class="bi bi-flower2"></i><h4>Duelo</h4><p>Acompañamiento emocional para transitar pérdidas con compasión.</p></div></div>
+</div></div></section>
+<section id="contacto" class="text-center"><div class="container"><h2 class="section-title" style="text-align:center;">Agenda tu primera sesión</h2><p style="color:#6b7280;">Respuesta en menos de 2 horas</p><div class="mt-4 d-flex justify-content-center gap-3 flex-wrap"><a href="https://wa.me/50255555555" class="btn-accent">WhatsApp — +502 5555-5555 →</a><a href="mailto:contacto@drperez.com" style="background:white; border:1px solid var(--line); color:var(--ink); border-radius:100px; padding:14px 28px; text-decoration:none; font-weight:600; font-size:14px;">contacto@drperez.com</a></div></div></section>
+</main>
+<footer><p style="font-size:13px;">© 2026 Dr. Juan Pérez — Psicólogo Clínico | Guatemala City</p></footer>
 </body>
-
 </html>
