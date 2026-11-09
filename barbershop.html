@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Barbería Estilo Pro</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbería Estilo Pro — Guatemala</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0a;--card:#161616;--line:rgba(255,255,255,0.08);--accent:#c8a44a;}
+:root{--bg:#080a0f;--card:#12141d;--line:rgba(255,255,255,0.08);--gold:#c8a44a;--gold2:#e8c77a;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg); color:#eaeaea; font-family:'Inter',sans-serif;}
-.navbar{background:rgba(10,10,10,0.8)!important; backdrop-filter:blur(20px); border-bottom:1px solid var(--line);}
-.navbar-brand{color:var(--accent)!important; font-weight:800; letter-spacing:-0.05em;}
-.nav-link{color:#9aa0a6!important; font-size:14px;}
-.nav-link:hover{color:white!important;}
-header{position:relative; background:linear-gradient(to bottom, rgba(0,0,0,0.2), #0a0a0a), url("https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg"); background-size:cover; background-position:center; height:80vh; display:flex; align-items:center; justify-content:center; text-align:center;}
-header h1{font-size:56px; font-weight:800; line-height:0.9; letter-spacing:-0.05em; max-width:700px;}
-.eyebrow{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:var(--accent); background:rgba(200,164,74,0.12); border:1px solid rgba(200,164,74,0.2); padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:16px;}
-section h2{font-size:36px; font-weight:800; letter-spacing:-0.05em; color:white;}
-.service-card{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px; transition:.4s;}
-.service-card:hover{transform:translateY(-5px); border-color:rgba(200,164,74,0.3);}
-.service-card i{font-size:22px; color:var(--accent); background:rgba(200,164,74,0.12); width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:16px;}
-footer{background:#080808; border-top:1px solid var(--line); padding:40px 0;}
-@media(max-width:768px){header h1{font-size:36px;}}
+body{background:var(--bg); color:#e8e8ea; font-family:'Inter',sans-serif;}
+.navbar{background:rgba(8,10,15,0.9)!important; backdrop-filter:blur(20px); border-bottom:1px solid var(--line);}
+.navbar-brand{font-weight:800; letter-spacing:-0.05em; color:white!important;}
+.nav-link{font-family:'JetBrains Mono'; font-size:11px; color:#9aa0a6!important; letter-spacing:0.1em;}
+.nav-link:hover{color:var(--gold)!important;}
+.hero{position:relative; min-height:88vh; display:flex; align-items:center; background:radial-gradient(600px at 80% 20%, rgba(200,164,74,0.18), transparent), linear-gradient(to bottom, rgba(0,0,0,0.2), var(--bg)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center; padding-top:80px;}
+.hero h1{font-size:78px; line-height:0.85; letter-spacing:-0.06em; font-weight:800;}
+.hero h1 span{color:var(--gold);}
+.badge-gold{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:var(--gold); background:rgba(200,164,74,0.12); border:1px solid rgba(200,164,74,0.25); padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:20px;}
+.btn-gold{background:var(--gold); color:black; padding:14px 28px; border-radius:100px; font-weight:700; text-decoration:none; display:inline-block; transition:.3s;}
+.btn-gold:hover{background:var(--gold2); transform:scale(1.03); color:black;}
+.btn-line{border:1px solid var(--line); color:white; padding:14px 28px; border-radius:100px; font-weight:600; text-decoration:none; display:inline-block; margin-left:10px;}
+.card-barber{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px; height:100%; transition:.4s;}
+.card-barber:hover{transform:translateY(-4px); border-color:rgba(200,164,74,0.35);}
+.card-barber i{color:var(--gold); background:rgba(200,164,74,0.12); width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:14px;}
+footer{background:#0a0c12; border-top:1px solid var(--line); padding:50px 0; text-align:center;}
+@media(max-width:768px){.hero h1{font-size:46px;}}
 </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar fixed-top navbar-expand-lg">
 <div class="container">
-<a class="navbar-brand" href="#">Barbería Pro.</a>
-<div class="ms-auto d-flex gap-3">
-<a class="nav-link" href="#servicios">Servicios</a>
-<a class="nav-link" href="#contacto">Contacto</a>
-</div>
+<a class="navbar-brand" href="#">ESTILO PRO.</a>
+<div class="ms-auto d-flex gap-3"><a class="nav-link" href="#servicios">SERVICIOS</a><a class="nav-link" href="#contacto">RESERVA</a></div>
 </div>
 </nav>
-<header id="inicio">
-<div>
-<div class="eyebrow">DESDE 2015 — GUATEMALA</div>
-<h1>Cortes que<br><span style="color:#6b7280;">imponen respeto.</span></h1>
+<section class="hero">
+<div class="container">
+<div class="badge-gold">ZONA 10 — GUATEMALA CITY — DESDE 2018</div>
+<h1>Corte que<br>impone<br><span>respeto.</span></h1>
+<p class="mt-3" style="color:#9aa0a6; max-width:420px; line-height:1.5;">No somos barberos de TikTok. Cortes clásicos, barba a navaja y atención de verdad. Sin filas, con cita.</p>
+<div class="mt-4"><a href="https://wa.me/50200000000" class="btn-gold">Reservar por WhatsApp →</a><a href="#servicios" class="btn-line">Ver precios</a></div>
 </div>
-</header>
-<section id="servicios" class="container my-5 py-5">
-<div class="text-center mb-5"><h2>Nuestros Servicios</h2><p style="color:#6b7280;">Atención personalizada, no cortes en serie.</p></div>
+</section>
+<section id="servicios" class="container py-5">
+<h6 style="font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:#6b7280;" class="text-center mb-4">SERVICIOS — SIN RELLENO</h6>
 <div class="row g-3">
-<div class="col-md-4"><div class="service-card text-center"><i class="bi bi-scissors"></i><h5>Corte Clásico</h5><p style="color:#9aa0a6; font-size:14px; margin-top:8px;">Elegancia tradicional con acabado profesional.</p></div></div>
-<div class="col-md-4"><div class="service-card text-center"><i class="bi bi-lightning"></i><h5>Fade Moderno</h5><p style="color:#9aa0a6; font-size:14px; margin-top:8px;">Degradado impecable que resalta tu estilo.</p></div></div>
-<div class="col-md-4"><div class="service-card text-center"><i class="bi bi-droplet-half"></i><h5>Afeitado Clásico</h5><p style="color:#9aa0a6; font-size:14px; margin-top:8px;">Toalla caliente, espuma y precisión experta.</p></div></div>
+<div class="col-md-4"><div class="card-barber"><i class="bi bi-scissors"></i><h5>Corte Clásico</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Degradado limpio, tijera arriba. 45 min.</p><strong style="color:var(--gold);">Q120</strong></div></div>
+<div class="col-md-4"><div class="card-barber"><i class="bi bi-brush"></i><h5>Barba + Navaja</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Toalla caliente, aceite y acabado.</p><strong style="color:var(--gold);">Q80</strong></div></div>
+<div class="col-md-4"><div class="card-barber"><i class="bi bi-stars"></i><h5>Pack Completo</h5><p style="color:#9aa0a6; font-size:13px; margin-top:8px;">Corte + barba + cejas. El más pedido.</p><strong style="color:var(--gold);">Q180</strong></div></div>
 </div>
 </section>
-<section id="contacto" class="container text-center py-5">
-<h2>Reserva tu silla</h2>
-<a href="https://wa.me/50212345678" style="background:white; color:black; padding:14px 28px; border-radius:100px; text-decoration:none; font-weight:600; display:inline-block; margin-top:20px;">WhatsApp +502 1234 5678</a>
+<section id="contacto" class="container pb-5 text-center">
+<div style="background:var(--card); border:1px solid var(--line); border-radius:28px; padding:48px;">
+<h2 style="font-size:36px; font-weight:800; letter-spacing:-0.05em;">¿Sin cita? No te atendemos.</h2>
+<p style="color:#9aa0a6; margin-top:12px;">Reserva en 20 segundos. Te confirmamos por WhatsApp.</p>
+<a href="https://wa.me/50200000000?text=Hola%20quiero%20reservar%20corte" class="btn-gold mt-4">Reservar ahora — WhatsApp</a>
+</div>
 </section>
-<footer class="text-center"><p style="font-size:13px; color:#6b7280;">© 2026 Barbería Estilo Pro</p></footer>
+<footer><p style="font-size:13px; color:#6b7280;">© 2026 Barbería Estilo Pro — Guatemala</p></footer>
 </body>
 </html>
